@@ -18,13 +18,13 @@ A Session Fixation vulnerability, classified as [CWE-384: Session Fixation](http
 
 ## OWASP Top 10 2021 Mapping
 
-This vulnerability maps to several categories in the [OWASP Top 10 2021](https://owasp.org/Top10/ "null"):
+This vulnerability maps to several categories in the [OWASP Top 10 2021:](https://owasp.org/Top10/ "null")
 
-- **Primary:** [**A07:2021 - Identification and Authentication Failures**](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/ "null"): The application fails to properly manage the lifecycle of session identifiers after login, allowing an attacker to fixate a session and impersonate a user.
+- [**A07:2021 - Identification and Authentication Failures:**](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/ "null") The application fails to properly manage the lifecycle of session identifiers after login, allowing an attacker to fixate a session and impersonate a user.
     
-- **Secondary:** [**A04:2021 - Insecure Design**](https://owasp.org/Top10/A04_2021-Insecure_Design/ "null"): The authentication process is insecure by design because it lacks a fundamental security control: the regeneration of session tokens upon a change in privilege level.
+- [**A04:2021 - Insecure Design:**](https://owasp.org/Top10/A04_2021-Insecure_Design/ "null") The authentication process is insecure by design because it lacks a fundamental security control: the regeneration of session tokens upon a change in privilege level.
     
-- **Secondary:** [**A01:2021 - Broken Access Control**](https://owasp.org/Top10/A01_2021-Broken_Access_Control/ "null"): The ultimate impact of the attack is a complete failure of access control, as the attacker gains all the permissions and access rights of the hijacked user account.
+- [**A01:2021 - Broken Access Control:**](https://owasp.org/Top10/A01_2021-Broken_Access_Control/ "null") The ultimate impact of the attack is a complete failure of access control, as the attacker gains all the permissions and access rights of the hijacked user account.
     
 
 ## Vulnerability Details
