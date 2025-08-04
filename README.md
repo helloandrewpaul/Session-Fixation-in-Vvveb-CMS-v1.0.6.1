@@ -6,26 +6,26 @@
     
 - **Vendor:** Vvveb
     
-- **Vendor URL:** `http://vvveb.com/`
+- **Vendor URL:** [http://vvveb.com](http://vvveb.com)
     
-- **Vendor GitHub:** `https://github.com/givanz/Vvveb`
+- **Vendor GitHub:** [https://github.com/givanz/Vvveb](https://github.com/givanz/Vvveb)
     
 - **Affected Version:** 1.0.6.1 (and likely prior versions)
+- **CVE ID:** [CVE-2025-8517](https://nvd.nist.gov/vuln/detail/CVE-2025-8517)
 
 ## Summary
 
-A Session Fixation vulnerability, classified as [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html "null"), was discovered in the authentication mechanism of Vvveb CMS version 1.0.6.1. The system fails to create and enforce a new session identifier upon successful login. This fundamental flaw allows for two attack variations: a standard Session Fixation attack using a server-issued session ID, and a more severe attack where an attacker can invent an arbitrary string to be used as the session ID. In both cases, the vulnerability can be exploited to hijack a user's authenticated session, leading to a full account takeover.
+A Session Fixation vulnerability, classified as [CWE-384: Session Fixation](https://cwe.mitre.org/data/definitions/384.html), was discovered in the authentication mechanism of Vvveb CMS version 1.0.6.1. The system fails to create and enforce a new session identifier upon successful login. This fundamental flaw allows for two attack variations: a standard Session Fixation attack using a server-issued session ID, and a more severe attack where an attacker can invent an arbitrary string to be used as the session ID. In both cases, the vulnerability can be exploited to hijack a user's authenticated session, leading to a full account takeover.
 
 ## OWASP Top 10 2021 Mapping
 
-This vulnerability maps to several categories in the [OWASP Top 10 2021:](https://owasp.org/Top10/ "null")
+This vulnerability maps to several categories in the [OWASP Top 10 2021:](https://owasp.org/Top10)
 
-- [**A07:2021 - Identification and Authentication Failures:**](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/ "null") The application fails to properly manage the lifecycle of session identifiers after login, allowing an attacker to fixate a session and impersonate a user.
-    
-- [**A04:2021 - Insecure Design:**](https://owasp.org/Top10/A04_2021-Insecure_Design/ "null") The authentication process is insecure by design because it lacks a fundamental security control: the regeneration of session tokens upon a change in privilege level.
-    
-- [**A01:2021 - Broken Access Control:**](https://owasp.org/Top10/A01_2021-Broken_Access_Control/ "null") The ultimate impact of the attack is a complete failure of access control, as the attacker gains all the permissions and access rights of the hijacked user account.
-    
+- [**A01:2021 - Broken Access Control:**](https://owasp.org/Top10/A01_2021-Broken_Access_Control) The ultimate impact of the attack is a complete failure of access control, as the attacker gains all the permissions and access rights of the hijacked user account.
+  
+- [**A04:2021 - Insecure Design:**](https://owasp.org/Top10/A04_2021-Insecure_Design) The authentication process is insecure by design because it lacks a fundamental security control: the regeneration of session tokens upon a change in privilege level.
+
+- [**A07:2021 - Identification and Authentication Failures:**](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures) The application fails to properly manage the lifecycle of session identifiers after login, allowing an attacker to fixate a session and impersonate a user.
 
 ## Vulnerability Details
 
